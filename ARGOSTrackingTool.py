@@ -23,6 +23,9 @@ file_object.close()
 
 #Pretend we read one line of data from the file
 for lineString in line_list:
+    #Check if line is a dataline
+    if lineString[0] in ("#", "u"):
+        continue
 
     #Split the string into a list of data items
     lineData = lineString.split() #for split if you don't specify, it will treat it as splitting by empty space as default
